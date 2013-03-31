@@ -1,0 +1,15 @@
+<html>
+	<body>
+		<a id="anchor" href="?success" onclick="this.href='?fail'; ">Static Link</a><br/>
+		<a onclick="document.body.bgColor='red'"><No HREF - BGColor=RED></a><br/>
+		<a href="#anchor" onClick="document.body.bgColor='yellow'">Anchor Link - BGColor=yellow</a><br/>
+		<a href="./test.html?relativesuccess" onclick="this.href='./test.html?relativefail'; ">Relative Link</a>
+		<div id="d"></div>
+		<script type="text/javascript">
+		window.setTimeout(function(){
+			console.log("timeout...");
+			document.getElementById("d").innerHTML='<a href="?dynamicsuccess" onclick="this.href=\'?dynamicfail\'; ">Dynamic Link</a>';
+		},1000);
+		</script>
+	</body>
+</html>

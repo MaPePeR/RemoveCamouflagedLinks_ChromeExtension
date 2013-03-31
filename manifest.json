@@ -1,0 +1,16 @@
+{
+  "name": "Remove camouflaged links",
+  "description":"Removes the onClick-Listener from any <a> tag defining a href-attribute, to prevent the Webpage from changing the href-attribute.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*","file://*/*"],
+      "js": ["script.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "tabs",  "http://*/*","https://*/*","file://*/*"
+  ]
+}
